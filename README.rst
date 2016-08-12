@@ -21,7 +21,7 @@ In spite of `Fizzy`_ README.md is **really** hassle free, some init commands fol
 
 .. code-block:: bash
 
-	$ curl -sL https://raw.githubusercontent.com/alem0lars/fizzy/master/build/fizzy | \
+  $ curl -sL https://raw.githubusercontent.com/alem0lars/fizzy/master/build/fizzy | \
   sudo tee /usr/local/bin/fizzy > /dev/null && \
   sudo chmod +x /usr/local/bin/fizzy
 
@@ -29,8 +29,8 @@ Prepare fizzy environment:
 
 .. code-block:: bash
 
-	$ mkdir ~/.fizzy
-	$ export FIZZY_DIR=~/.fizzy
+  $ mkdir ~/.fizzy
+  $ export FIZZY_DIR=~/.fizzy
 
 Inside ``~/.fizzy`` there will be two directories:
 
@@ -50,11 +50,12 @@ Synchronize configs ``jak3/configs-awesomewm`` to fizzy environment using name
 
 Instance (*install*) synchronized configs ``awesomewm`` to fizzy environment using name
 ``awesomewm``:
+
 .. code-block:: bash
 
   $ fizzy qi -C awesomewm -I awesomewm -V jake-yoroi-linux
 
-DONE. Never so easy.
+**DONE**. Never so easy.
 
 ===============================================
 Make your own configs repository.. EASY configs
@@ -88,9 +89,9 @@ Inside ``vars`` setting and hierarchies of them could be made as follow:
 
 .. code-block:: yaml
 
-	features:
-    - vimperator
-		- vimperator_dir
+features:
+  - vimperator
+  - vimperator_dir
 
 **NB**: If meta has *only features* they must be declared here.
 
@@ -109,11 +110,11 @@ Child two ``alem0lars-gentoo``:
 
 .. code-block:: yaml
 
-	# => inherits: generic <= #
+  # => inherits: generic <= #
 
-	features:
-		- gentoo
-		- weechat
+  features:
+    - gentoo
+    - weechat
 
 Inside ``elems`` copy your *rc* files like::
 
@@ -132,13 +133,13 @@ Using a template file you could do something like:
 
 .. code-block:: ruby
 
-	...
+  ...
 
   <% if has_feature? :pinboard %>
   map <silent> <leader>m :tabopen https://pinboard.in/u:jak3<CR>
   <% end %>
 
-	...
+  ...
 
 The repository is ready to use, steps to follow are already mentioned in section
 above.
